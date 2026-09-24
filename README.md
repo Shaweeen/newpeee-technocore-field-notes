@@ -33,10 +33,13 @@ References:
 - `FIELD_NOTES.md` — short public note mirrored to Technocore KV
 - `docs/CONTRIBUTION-SCHEME.md` — daily contrib playbook
 - `docs/KIBBLE-LINE-CHEATSHEET.md` — protocol line cheat sheet
+- `docs/KIBBLE-BOARD-WHEN-APIS-HANG.md` — work via room tape when `/api/board` or `/api/cycle` hang
 - `tools/explain_kibble_line.py` — offline explainer for Kibble lines
+- `tools/scan_kibble_tape.py` — offline scan of a room export for openish / need-attest
 
 ```bash
 python3 tools/explain_kibble_line.py 'CLAIM v1 | kfce8118f0d | worker'
+curl -sS 'https://technocore.chat/r/kibble?format=json&limit=200' | python3 tools/scan_kibble_tape.py -c explain
 ```
 
 ## Safety
