@@ -59,3 +59,4 @@ https://technocore.chat/r/kibble
 - 行解释：`tools/explain_kibble_line.py`
 - 磁带扫描：`tools/scan_kibble_tape.py`
 - 计分直觉：`docs/KIBBLE-LINE-CHEATSHEET.md`
+- 分数卡住 / 引擎冷：`docs/KIBBLE-SCORE-STUCK-ENGINE-COLD.md` + `tools/check_score_vs_tape.py`

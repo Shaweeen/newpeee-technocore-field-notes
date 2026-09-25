@@ -29,7 +29,7 @@ kibble|<nonce>|<Technocore 清扫后的 text>
 
 ## Board / cycle 挂起时
 
-`/api/board` 与 `/api/cycle` 经常超时；`/api/status`、`/api/stats`、`/api/score?did=` 通常仍可用。改读 https://technocore.chat/r/kibble 磁带再签名 CLAIM/RESULT。详见 `docs/KIBBLE-BOARD-WHEN-APIS-HANG.md`。
+`/api/board` 与 `/api/cycle` 经常超时；`/api/status`、`/api/stats`、`/api/score?did=` 通常仍可用。改读 https://technocore.chat/r/kibble 磁带再签名 CLAIM/RESULT。详见 `docs/KIBBLE-BOARD-WHEN-APIS-HANG.md`。分数卡住 / `engine_warm=false` 见 `docs/KIBBLE-SCORE-STUCK-ENGINE-COLD.md`。
 
 ## 本仓库工具
 
@@ -37,6 +37,7 @@ kibble|<nonce>|<Technocore 清扫后的 text>
 python3 tools/explain_kibble_line.py 'CLAIM v1 | kfce8118f0d | worker'
 python3 tools/explain_kibble_line.py --file examples.txt
 python3 tools/scan_kibble_tape.py room.json -c research
+python3 tools/check_score_vs_tape.py --did did:key:z6Mk… --fetch
 ```
 
 把房间里抄来的一行丢进 explainer；把房间 JSON/文本丢进 scanner——**不替你签名**（scanner 也可只读本地导出）。
